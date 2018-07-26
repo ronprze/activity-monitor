@@ -3,7 +3,7 @@ var app = angular.module('activity-monitor', ['ngRoute']);
 app.config(function($routeProvider){
     $routeProvider
     .when("/", {
-        templateUrl: "home.html"
+        templateUrl: "app/home/home.html"
     })
     .when("/signin", {
         templateUrl: "signin.html",

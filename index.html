@@ -25,60 +25,6 @@
 
     </head>
     <body ng-app="activity-monitor">
-        <header>
-            <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
-                    <a class="navbar-brand" href="#">Logo</a>
-                    <!--Logo <img src="" alt="Logo"> -->
-                    
-                    <!-- Toggler/collapsibe Button -->
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-
-                    <!-- Navbar links -->
-                    <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                        <ul class="navbar-nav">
-                            <li class="nav-item" ng-show="isLoggedIn()">
-                                <a class="nav-link" href="#!/home">Home</a>
-                            </li>
-                            <li class="nav-item" ng-show="isLoggedIn()">
-                                <a class="nav-link" href="#!/new">Workouts</a>
-                            </li>
-                            <li class="nav-item" ng-show="isLoggedIn()">
-                                <a class="nav-link" href="#!/profile">Profile</a>
-                            </li>
-                        </ul>
-                        <ul class="navbar-nav ml-auto">
-                            <li class="nav-item" ng-hide="isLoggedIn()">
-                                <a class="nav-link" href="#!/signup">Sign Up</a>
-                            </li>
-                            <li class="nav-item" ng-hide="isLoggedIn()">
-                                <a class="nav-link" href="#!/signin">Sign In</a>
-                            </li>
-                            <li class="nav-item" ng-show="isLoggedIn()">
-                                <a class="nav-link" href="javascript:void(0)" ng-click="logout()">Logout</a>
-                            </li>
-                        </ul>
-                    </div>  
-                </nav>
-            <div class="jumbotron-fluid bg-light mx-auto text-center">
-                <div class="container">
-                    <h1 class="display-3">My Activity monitor </h1>
-                    <p class="lead">Some Helper text</p>
-                    <hr class="my-2">
-                    <p>More info</p>
-                    <p class="lead">
-                        <a class="btn btn-primary btn-lg text-center" href="Jumbo action link" role="button">Jumbo action name</a>
-                    </p>
-                </div>
-            </div>
-        </header>
-        <main>
-
-        </main>
-        <footer class="bg-dark">
-            
-
-        </footer>
+        <ng-view></ng-view>
     </body>
 </html>
