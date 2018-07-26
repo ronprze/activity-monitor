@@ -28,15 +28,13 @@
         <header>
             <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
                     <a class="navbar-brand" href="#">Logo</a>
-                        <!--Logo <img src="" alt="Logo"> -->
+                    <!--Logo <img src="" alt="Logo"> -->
                     
                     <!-- Toggler/collapsibe Button -->
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
-                    <!-- Free text Serach field-->
-                    
                     <!-- Navbar links -->
                     <div class="collapse navbar-collapse" id="collapsibleNavbar">
                         <ul class="navbar-nav">
@@ -52,10 +50,10 @@
                         </ul>
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item" ng-hide="isLoggedIn()">
-                                <a class="nav-link" href="#">Sign Up</a>
+                                <a class="nav-link" href="#!/signup">Sign Up</a>
                             </li>
                             <li class="nav-item" ng-hide="isLoggedIn()">
-                                <a class="nav-link" ng-href="#!/login">Login</a>
+                                <a class="nav-link" href="#!/signin">Sign In</a>
                             </li>
                             <li class="nav-item" ng-show="isLoggedIn()">
                                 <a class="nav-link" href="javascript:void(0)" ng-click="logout()">Logout</a>
@@ -63,14 +61,14 @@
                         </ul>
                     </div>  
                 </nav>
-            <div class="jumbotron jumbotron-fluid">
+            <div class="jumbotron-fluid bg-light mx-auto text-center">
                 <div class="container">
-                    <h1 class="display-3">Fluid jumbo heading</h1>
-                    <p class="lead">Jumbo helper text</p>
+                    <h1 class="display-3">My Activity monitor </h1>
+                    <p class="lead">Some Helper text</p>
                     <hr class="my-2">
                     <p>More info</p>
                     <p class="lead">
-                        <a class="btn btn-primary btn-lg" href="Jumbo action link" role="button">Jumbo action name</a>
+                        <a class="btn btn-primary btn-lg text-center" href="Jumbo action link" role="button">Jumbo action name</a>
                     </p>
                 </div>
             </div>
@@ -78,7 +76,8 @@
         <main>
 
         </main>
-        <footer>
+        <footer class="bg-dark">
+            
 
         </footer>
     </body>
