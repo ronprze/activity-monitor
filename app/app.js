@@ -10,10 +10,10 @@ app.config(function($routeProvider){
         controller: "loginCtrl"
     })
     .when("/signup", {
-
+        
     })
     .when("profile/:profileId", {
-
+        templateUrl: "app/profile/dashboard.html"
     })
     .when("workout/:workoutId", {
         

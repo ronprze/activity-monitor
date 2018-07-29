@@ -1,6 +1,6 @@
 app.controller('loginCtrl', function($scope, user, $location){
     $scope.email = "";
-    $scope.username = "";
+    //$scope.username = "";
     $scope.password = "";
     $scope.invalidLogin = false;
 
