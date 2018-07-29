@@ -11,9 +11,9 @@ app.factory('user', function($http, $q){
     function login(email, password){
         var async = $q.defer();
 
-        var loginURL = "https://my-json-server.typicode.com/ronprze/activity-monitor" + email + "&password=" + password;
+        var loginURL = "https://my-json-server.typicode.com/ronprze/activity-monitor/Users"; // + email + "&password=" + password
         $http.get('/db.json').then(function(response){
-            if (response.data.length > 0){
+            if (response.data.users.length > 0){
                 activeUser = new User(response.data.users[0]);
                 async.resolve(activeUser);
             }
