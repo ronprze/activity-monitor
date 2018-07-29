@@ -1,4 +1,8 @@
 .frm-center {
-    max-width: 500px;
+    max-width: 400px;
     margin: 0 auto;
+}
+
+.bg-color-light {
+    background-color: #fafafa;
 }
