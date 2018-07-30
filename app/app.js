@@ -13,7 +13,8 @@ app.config(function($routeProvider){
         
     })
     .when("profile/:profileId", {
-        templateUrl: "app/profile/dashboard.html"
+        templateUrl: "app/profile/:profileId/dashboard.html"
+        
     })
     .when("workout/:workoutId", {
         

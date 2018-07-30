@@ -6,7 +6,7 @@ app.controller('loginCtrl', function($scope, user, $location){
 
     $scope.login = function(){
         user.login($scope.email, $scope.password).then(function(activeUser){
-            $location.path("/");
+            $location.path("app/profile/:profileId/dashboard.html");
         }, function(){
             $scope.invalidLogin = true;
         })
