@@ -1,11 +1,11 @@
 
-app.controller("navbarCtrl", function($scope, user, $location){
+app.controller("navbarCtrl", function($scope, usr, $location){
     $scope.isUserLoggedIn = function() {
-        return user.isLoggedIn();
+        return usr.isLoggedIn();
     }
 
     $scope.logout = function() {
-        user.logout();
+        usr.logout();
         $location.path("/");
         //add clear session methods
     }

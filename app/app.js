@@ -12,6 +12,10 @@ app.config(function($routeProvider){
     .when("/signup", {
         
     })
+    .when("/dashboard", {
+        templateUrl: "app/profile/:profileId/dashboard.html"
+        
+    })
     .when("profile/:profileId", {
         templateUrl: "app/profile/:profileId/dashboard.html"
         

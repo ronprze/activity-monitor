@@ -29,7 +29,7 @@ app.factory('usr', function($http, $q){
         return async.promise;
     }
 
-    function isUserLoggedIn(){
+    function isLoggedIn(){
         return activeUser ? true : false;
     }
 
@@ -44,7 +44,7 @@ app.factory('usr', function($http, $q){
     return {
         login : login,
         logout : logout,
-        isUserLoggedIn : isUserLoggedIn,
+        isLoggedIn : isLoggedIn,
         getActiveUser : getActiveUser
     }
 });
