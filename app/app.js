@@ -17,11 +17,16 @@ app.config(function($routeProvider){
         
     })
     .when("profile/:profileId", {
-        templateUrl: "app/profile/:profileId/dashboard.html"
+        templateUrl: "app/profile/:profileId/profile.html"
         
     })
-    .when("workout/:workoutId", {
-        
+    .when("workouts/", {
+        templateUrl: "app/workouts/workouts.html"
+
+    })
+    .when("exercises", {
+        templateUrl: "app/exercise/exercises.html"
+
     })
     .otherwise({
         redirectTo:"/"
