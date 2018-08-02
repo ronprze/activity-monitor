@@ -5,13 +5,14 @@
             "fname": "Ron",
             "lname": "Perez",
             "email": "ron@ron.com",
-            "password": "1234"
+            "password": "123"
         }
     ],
     "exercises" : [
         {
             "id": 1,
             "name": "Squat",
+            "description": "Let the hips lead the way down and keep your back stright.",
             "type" : "compound",
             "Muscles" : [
                 "Gluteus Maximus",
@@ -24,8 +25,102 @@
                 "Rectus Abdominis",
                 "Obliques"
             ],
+            "variations": [
+                "Front Squat",
+                "Hack Squat",
+                "Full Squat"
+            ],
+            "comments": "Let the hips lead the way down and keep your back straight.",
+            "videoUrl": "https://www.youtube.com/watch?v=upF-znxk1U4",
+            "imageUrl": ""
+        },
+        {
+            "id": 2,
+            "name": "Deadlift",
+            "description": "Lift the bar by extending hips and knees to full extension.",
+            "type" : "compound",
+            "Muscles" : [
+                "Gluteus Maximus",
+                "Quadriceps",
+                "Adductor Magnus",
+                "Soleus",
+                "Hamstrings",
+                "Gastrocnemius",
+                "Erector Spinae",
+                "Trapezius, Middle",
+                "Trapezius, Upper",
+                "Levator Scapulae",
+                "Rhomboids",
+                "Rectus Abdominis",
+                "Obliques"
+            ],
+            "variations": [
+                "Stiff-leg Deadlift",
+                "Sumo Deadlift",
+                "Deficit Deadlift"
+            ],
+            "comments": "Keep the chest out and extended, keep the back straight",
+            "videoUrl": "",
+            "imageUrl": ""
+        },
+        {
+            "id": 3,
+            "name": "Pullup",
+            "description": "Pull yourself up until the chest reaches the bar",
+            "type" : "compound",
+            "Muscles" : [
+                "Latissimus Dorsi",
+                "Posterior Deltoid",
+                "Triceps long head",
+                "Teres major",
+                "Pectoralis major sternal & lower heads"
+            ],
+            "variations": [
+                "Chin-ups",
+                "Wide grip",
+                "Narrow grip",
+                "Behind the neck"
+            ],
             "comments": "",
-            "videoUrl": "https://www.youtube.com/watch?v=upF-znxk1U4"
+            "videoUrl": "",
+            "imageUrl": ""
+        },
+        {
+            "id": 4,
+            "name": "Military Press",
+            "type" : "compound",
+            "Muscles" : [
+                "Middle Deltoid",
+                "Anterior Deltoid",
+                "Pectoralis major clavicular head",
+                "Supraspinatus (Frist 5-30 degrees)"
+            ],
+            "variations": [
+                "",
+                ""
+            ],
+            "comments": "",
+            "videoUrl": "",
+            "imageUrl": ""
+        },
+        {
+            "id": 5,
+            "name": "Chest Dip",
+            "type" : "compound",
+            "Muscles" : [
+                "Pectoralis major",
+                "Lower Pectoralis major",
+                "Anterior Deltoid",
+                "Coracobrachialis",
+                "Biceps short head"
+            ],
+            "variations": [
+                "Weighted dips",
+                "Rings dips"
+            ],
+            "comments": "",
+            "videoUrl": "",
+            "imageUrl": ""
         }
     ]
 }
