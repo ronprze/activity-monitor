@@ -14,13 +14,16 @@
                 <a class="nav-link" href="#!/home">Dashboard</a>
             </li>
             <li class="nav-item" ng-show="isUserLoggedIn()">
-                <a class="nav-link" href="#!/new">Workouts</a>
+                <a class="nav-link" href="#!/workouts">Workouts</a>
+            </li>
+            <li class="nav-item" ng-show="isUserLoggedIn()">
+                <a class="nav-link" href="#!/exercise">Exercise</a>
             </li>
             <li class="nav-item" ng-show="isUserLoggedIn()">
                 <a class="nav-link" href="#!/profile">Profile</a>
             </li>
         </ul>
-        <form class="form-inline my-2 my-md-0">
+        <form class="form-inline my-2 my-md-0 ml-auto" ng-show="isUserLoggedIn()">
             <input class="form-control mr-sm-2" placeholder="Search" aria-label="Search" type="text">
         </form>
         <ul class="navbar-nav ml-auto">

@@ -21,12 +21,12 @@ app.config(function($routeProvider){
         
     })
     .when("workouts/", {
-        templateUrl: "app/workouts/workouts.html"
-
+        templateUrl: "app/workouts/workouts.html",
+        controller : "workoutsCtrl"
     })
     .when("exercises", {
-        templateUrl: "app/exercise/exercises.html"
-
+        templateUrl: "app/exercise/exercises.html",
+        controller : "exercisesCtrl"
     })
     .otherwise({
         redirectTo:"/"

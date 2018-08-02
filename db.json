@@ -7,5 +7,25 @@
             "email": "ron@ron.com",
             "password": "1234"
         }
+    ],
+    "exercises" : [
+        {
+            "id": 1,
+            "name": "Squat",
+            "type" : "compound",
+            "Muscles" : [
+                "Gluteus Maximus",
+                "Quadriceps",
+                "Adductor Magnus",
+                "Soleus",
+                "Hamstrings",
+                "Gastrocnemius",
+                "Erector Spinae",
+                "Rectus Abdominis",
+                "Obliques"
+            ],
+            "comments": "",
+            "videoUrl": "https://www.youtube.com/watch?v=upF-znxk1U4"
+        }
     ]
 }

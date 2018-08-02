@@ -1,5 +1,5 @@
 app.factory('usr', function($http, $q){
-    var activeUser = null; //new User({fname:"ron", lname:"pe", email:"r@r.com", id:1});
+    var activeUser = new User({fname:"ron", lname:"pe", email:"r@r.com", id:1}); //null;
 
     function User(plainUser){
         this.fname = plainUser.fname;
