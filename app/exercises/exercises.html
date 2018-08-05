@@ -1,13 +1,23 @@
 <wo-navbar></wo-navbar>
-<header>
-    
+<header class="mt-2">
+    <div class="container container-fluid">
+        <div class="card border-light">
+            <img class="card-img-top" src="holder.js/100px180/" alt="">
+            <div class="card-body">
+                <div>
+                    <h3 class="card-title">Exercise Library</h3>
+                </div>
+                <p class="card-text">Browse or add new Exercises</p>
+            </div>
+        </div>
+    </div>
 </header>
-<main class="container">
-    <div class="row mb-5">
-        <div class="col-md-4">
-            <h2>{{5+5}}</h2>
-            <p>{{5+5}}</p>
-            <p><a class="btn btn-secondary" ng-href="#" role="button">View details »</a></p>
+<main class="container container-fluid mb-5">
+    <div class="media" ng-repeat="exe in exercises">
+        <img class="align-self-start pl-4 mr-3" ng-src=".../64x64" alt="{{exe.name}}">
+        <div class="media-body">
+            <h5 class="mt-0">{{exe.name}}</h5>
+            <p>{{exe.description}}</p>
         </div>
     </div>
 </main>

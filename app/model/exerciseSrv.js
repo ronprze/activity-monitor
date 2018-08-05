@@ -24,6 +24,10 @@ app.factory('exercises', function($http, $q){
     }
 
     function setExercise(){
+        
+    }
+
+    function addExercise(){
 
     }
 

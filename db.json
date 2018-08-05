@@ -19,7 +19,7 @@
         {
             "id": 1,
             "name": "Squat",
-            "description": "Let the hips lead the way down and keep your back stright.",
+            "description": "The Squat is a full body compound exercise. You Squat by bending your hips and knees while the bar rests on your upper-back. Squat down until your hips are below your knees. Keep your knees out and lower back neutral. Then Squat back up. Lock your hips and knees at the top.",
             "type" : "compound",
             "Muscles" : [
                 "Gluteus Maximus",
@@ -44,7 +44,7 @@
         {
             "id": 2,
             "name": "Deadlift",
-            "description": "Lift the bar by extending hips and knees to full extension.",
+            "description": "Proper Deadlift form starts with the weight on the floor. Pull the bar to your mid-thighs and lock your hips and knees. Return the weight to the floor by moving your hips back while bending your legs. Rest a second at the bottom and repeat.",
             "type" : "compound",
             "Muscles" : [
                 "Gluteus Maximus",
@@ -73,7 +73,7 @@
         {
             "id": 3,
             "name": "Pullup",
-            "description": "Pull yourself up until the chest reaches the bar",
+            "description": "Proper Pullup form starts hanging on a pullup bar. Grip the bar shoulder-width apart with straight arms. Pull yourself up by pulling your elbows to the floor. Keep pulling until your chin passes the bar. Lower yourself all the way down until your arms are straight. Then pull yourself up again.",
             "type" : "compound",
             "Muscles" : [
                 "Latissimus Dorsi",
@@ -94,7 +94,8 @@
         },
         {
             "id": 4,
-            "name": "Military Press",
+            "name": "Overhead Press",
+            "description": "Proper Overhead Press form starts standing with the bar on your shoulders. Press the bar over your head until your elbows are locked. Don’t use your legs, keep them straight. Lower the bar to your shoulders and repeat.",
             "type" : "compound",
             "Muscles" : [
                 "Middle Deltoid",
@@ -103,8 +104,12 @@
                 "Supraspinatus (Frist 5-30 degrees)"
             ],
             "variations": [
-                "",
-                ""
+                "Push press",
+                "Military press",
+                "Clean and press", 
+                "Seated press",
+                "Behind the neck press",
+                "Dumbbell overhead press"
             ],
             "comments": "",
             "videoUrl": "",
@@ -113,6 +118,7 @@
         {
             "id": 5,
             "name": "Chest Dip",
+            "description": "Dips are a compound, body-weight exercise. You do Dips by first raising yourself on two dip bars with straight arms. Lower your body until your shoulders are below your elbows. Push yourself up until your arms are straight again. Dips work your chest, shoulders, back and arm muscles.",
             "type" : "compound",
             "Muscles" : [
                 "Pectoralis major",

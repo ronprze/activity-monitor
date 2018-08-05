@@ -1,4 +1,4 @@
-app.controller('excersiesCtrl', function($scope, $location, exercises, usr){
+app.controller('exercisesCtrl', function($scope, $location, exercises, usr, $log){
     // Checking if the user is logged in, 
     //if not navigating back to home page
     if (!usr.isLoggedIn()) {
@@ -7,5 +7,10 @@ app.controller('excersiesCtrl', function($scope, $location, exercises, usr){
     }
 
     //get all Exercises
-    //$scope
+    exercises.getExercises().then(function(exercises){
+        $scope.exercises = exercises;
+    }, function(err){
+        $log.logs(err);
+    })
+    
 });
