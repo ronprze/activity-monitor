@@ -11,7 +11,7 @@
                 <label for="pwd">Password</label>
                 <input type="password" class="form-control" id="pwd" ng-model="password">
             </div>
-            <button type="button" class="btn btn-block btn-md btn-primary" ng-click="login()">Log In</button>
+            <button type="button" class="btn btn-block btn-md btn-primary" ng-submit="login()">Log In</button>
             <div class="alert alert-danger my-3 text-center" role="alert" ng-show="invalidLogin">
                 Invalid Credentials!
             </div>

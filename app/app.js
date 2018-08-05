@@ -13,20 +13,24 @@ app.config(function($routeProvider){
         
     })
     .when("/dashboard", {
-        templateUrl: "app/dashboard/dashboard.html"
-        
+        templateUrl: "app/dashboard/dashboard.html",
+        controller : "dashboardCtrl"
     })
-    .when("profile/:profileId", {
-        templateUrl: "app/profile/:profileId/profile.html"
-        
+    .when("/profile", {
+        templateUrl: "app/profile/profile.html",
+        controller : "profileCtrl"
     })
-    .when("workouts/", {
+    .when("/workouts", {
         templateUrl: "app/workouts/workouts.html",
         controller : "workoutsCtrl"
     })
-    .when("exercises", {
+    .when("/exercises", {
         templateUrl: "app/exercises/exercises.html",
         controller : "exercisesCtrl"
+    })
+    .when("/exercises/:id", {
+        templateUrl: "app/exercises/exercise.html",
+        controller : "exerciseCtrl"
     })
     .otherwise({
         redirectTo:"/"
