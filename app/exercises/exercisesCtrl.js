@@ -14,7 +14,5 @@ app.controller('exercisesCtrl', function($scope, $location, exercises, usr, $log
     });
 
     //get Exercise details
-
-    //Edit exercise
     
 });

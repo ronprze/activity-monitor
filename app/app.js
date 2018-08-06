@@ -29,8 +29,12 @@ app.config(function($routeProvider){
         controller : "exercisesCtrl"   
     })
     .when("/exercises/:id", {
-        templateUrl: "app/exercises/exercise.html",
-        controller : "exerciseCtrl"
+        templateUrl: "app/exercises/exerciseDetails.html",
+        controller : "exercisesCtrl"
+    })
+    .when("/exercises/newExcersize", {
+        templateUrl: "app/exercises/newExercise.html",
+        controller: "newExerciseCtrl"
     })
     .otherwise({
         redirectTo:"/"

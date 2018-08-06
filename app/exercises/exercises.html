@@ -1,15 +1,18 @@
 <wo-navbar></wo-navbar>
-<header class="mt-2">
+<header class="mt-3">
     <div class="container container-fluid">
-        <div class="card border-light">
-            <img class="card-img-top" src="holder.js/100px180/" alt="">
-            <div class="card-body">
-                <div>
-                    <h3 class="card-title">Exercise Library</h3>
+        <div class="row">
+            <div class="col-sm-3 col-md-3 col-lg-4">
+                <div class="d-inline">
+                    <h3 class="">Exercise Library</h3>
                     <hr>
+                    <pre>Browse or add new Exercises</pre>
                 </div>
-                <pre>Browse or add new Exercises</pre>
             </div>
+            <div class="col-sm-3 col-md-3 col-lg-4 ml-auto">
+                <a ng-href="#!/exercises/newExercise" class="btn btn-secondary" ng-click="">Add Exercise</a>
+            </div>
+            
         </div>
     </div>
 </header>
@@ -21,7 +24,7 @@
                 <div class="card-body">
                     <h4 class="card-title">{{exe.name}}</h4>
                     <p class="card-text">{{exe.description}}</p>
-                    <a href="#" class="btn btn-primary">More Details</a>
+                    <a ng-href="#!/exercises/{{exe.id}}" class="btn btn-primary">More Details</a>
                 </div>
             </div>
         </div>
