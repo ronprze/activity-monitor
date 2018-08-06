@@ -6,3 +6,7 @@
 .bg-color-light {
     background-color: #fafafa;
 }
+
+.link-deco {
+    text-decoration: none;
+}

@@ -11,6 +11,10 @@ app.controller('exercisesCtrl', function($scope, $location, exercises, usr, $log
         $scope.exercises = exercises;
     }, function(err){
         $log.logs(err);
-    })
+    });
+
+    //get Exercise details
+
+    //Edit exercise
     
 });
