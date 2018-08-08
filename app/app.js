@@ -34,9 +34,9 @@ app.config(function($routeProvider){
     })
     .when("/exercises/newExcersize", {
         templateUrl: "app/exercises/newExercise.html",
-        controller: "newExerciseCtrl"
+        controller : "newExerciseCtrl"
     })
     .otherwise({
-        redirectTo:"/"
+        redirectTo: "/"
     })
 });

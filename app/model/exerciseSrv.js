@@ -31,9 +31,14 @@ app.factory('exercises', function($http, $q){
 
     }
 
+    function createExercise(){
+
+    }
+
     return {
         getExercises : getExercises,
         setExercise : setExercise,
-        addExercise :addExercise
+        addExercise :addExercise,
+        createExercise: createExercise
     }
 });

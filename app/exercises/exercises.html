@@ -3,10 +3,13 @@
     <div class="container container-fluid">
         <div class="row">
             <div class="col-sm-3 col-md-3 col-lg-4">               
-                    <h3 class="">Exercise Library</h3>
+                <h3 class="">Exercise Library</h3>
+            </div>
+            <div class="col-sm-3 col-md-3 col-lg-4">
+
             </div>
             <div class="col-sm-3 col-md-3 col-lg-4 ml-auto">
-                <a ng-href="#!/exercises/newExercise" class="btn btn-secondary float-md-right" ng-click="">Add Exercise</a>
+                <a ng-href="#!/exercises/newExercise" class="btn btn-secondary float-md-right">Add Exercise</a>
             </div>  
         </div>
         <div>
@@ -15,7 +18,65 @@
         </div>
     </div>
 </header>
-<main class="container container-fluid mb-5">
+<section class="container container-fluid mb-5">
+        <div class="container mt-5">
+            <form>
+                <div class="form-group row">
+                    <label for="name" class="col-sm-2 col-form-label">Name</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="name" ng-model="name">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="description" class="col-sm-2 col-form-label">Description</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="description"  ng-model="description">
+                    </div>
+                </div>
+                <div class="form-group row">
+                        <label for="duration" class="col-sm-2 col-form-label">Comments</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="comment" ng-model="comment">
+                        </div>
+                </div>
+                <div class="form-group row">
+                    <label for="type" class="col-sm-2 col-form-label">Type</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="type" ng-model="type">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="steps" class="col-sm-2 col-form-label">Muscles</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="muscles" ng-model="muscles">
+                    </div>
+                </div>
+                
+                <div class="form-group row">
+                    <label for="imageUrl" class="col-sm-2 col-form-label">Image Url</label>
+                    <div class="col-sm-10">
+                        <input type="file" accept="image/*" image="image" id="imageUrl"/>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="image" class="col-sm-2 col-form-label">Video Url</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="video" ng-model="videoUrl">
+                    </div>
+                </div>
+                <div class="form-inline row">
+                    <div class="col-sm-3 my-1">
+                        <button type="button" class="btn btn-block btn-lg btn-primary" ng-click="">Create</button>
+                    </div>
+                    <div class="col-sm-3 my-1"> 
+                        <button type="button" class="btn btn-block btn-lg btn-secondary" ng-click="">Close</button>
+                    </div>
+                </div>
+            </form>
+            <img class="img-fluid" ng-src="{{image.url}}" alt="{{name}}" >
+        </div>
+</section>
+<section class="container container-fluid mb-5">
     <div class="row my-1">
         <div class="col-sm-3 col-md-3 col-lg-4" ng-repeat="exe in exercises">
             <div class="card-deck mx-auto">
@@ -28,5 +89,5 @@
             </div>
         </div>
     </div>
-</main>
+</section>
 <footer-navbar></footer-navbar>

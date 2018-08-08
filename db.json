@@ -21,7 +21,8 @@
             "name": "Squat",
             "description": "The Squat is a full body compound exercise. You Squat by bending your hips and knees while the bar rests on your upper-back. Squat down until your hips are below your knees. Keep your knees out and lower back neutral. Then Squat back up. Lock your hips and knees at the top.",
             "type" : "compound",
-            "Muscles" : [
+            "joint": "Hip",
+            "muscles" : [
                 "Gluteus Maximus",
                 "Quadriceps",
                 "Adductor Magnus",
@@ -35,7 +36,8 @@
             "variations": [
                 "Front Squat",
                 "Hack Squat",
-                "Full Squat"
+                "Full Squat",
+                "Overhead Squat"
             ],
             "comments": "Let the hips lead the way down and keep your back straight.",
             "videoUrl": "https://www.youtube.com/watch?v=upF-znxk1U4",
@@ -46,7 +48,8 @@
             "name": "Deadlift",
             "description": "Proper Deadlift form starts with the weight on the floor. Pull the bar to your mid-thighs and lock your hips and knees. Return the weight to the floor by moving your hips back while bending your legs. Rest a second at the bottom and repeat.",
             "type" : "compound",
-            "Muscles" : [
+            "joint": "Hip",
+            "muscles" : [
                 "Gluteus Maximus",
                 "Quadriceps",
                 "Adductor Magnus",
@@ -75,7 +78,8 @@
             "name": "Pullup",
             "description": "Proper Pullup form starts hanging on a pullup bar. Grip the bar shoulder-width apart with straight arms. Pull yourself up by pulling your elbows to the floor. Keep pulling until your chin passes the bar. Lower yourself all the way down until your arms are straight. Then pull yourself up again.",
             "type" : "compound",
-            "Muscles" : [
+            "joint": "Shoulder",
+            "muscles" : [
                 "Latissimus Dorsi",
                 "Posterior Deltoid",
                 "Triceps long head",
@@ -97,7 +101,8 @@
             "name": "Overhead Press",
             "description": "Proper Overhead Press form starts standing with the bar on your shoulders. Press the bar over your head until your elbows are locked. Don’t use your legs, keep them straight. Lower the bar to your shoulders and repeat.",
             "type" : "compound",
-            "Muscles" : [
+            "joint": "Shoulder",
+            "muscles" : [
                 "Middle Deltoid",
                 "Anterior Deltoid",
                 "Pectoralis major clavicular head",
@@ -120,7 +125,8 @@
             "name": "Chest Dip",
             "description": "Dips are a compound, body-weight exercise. You do Dips by first raising yourself on two dip bars with straight arms. Lower your body until your shoulders are below your elbows. Push yourself up until your arms are straight again. Dips work your chest, shoulders, back and arm muscles.",
             "type" : "compound",
-            "Muscles" : [
+            "joint": "Shoulder",
+            "muscles" : [
                 "Pectoralis major",
                 "Lower Pectoralis major",
                 "Anterior Deltoid",
