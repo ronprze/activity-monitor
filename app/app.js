@@ -24,6 +24,9 @@ app.config(function($routeProvider){
         templateUrl: "app/workouts/workouts.html",
         controller : "workoutsCtrl"
     })
+    .when("newWorkout", {
+        templateUrl: "app/workouts/newWorkout.html"
+    })
     .when("/exercises", {
         templateUrl: "app/exercises/exercises.html",
         controller : "exercisesCtrl"   
@@ -32,7 +35,7 @@ app.config(function($routeProvider){
         templateUrl: "app/exercises/exerciseDetails.html",
         controller : "exercisesCtrl"
     })
-    .when("/exercises/newExcersize", {
+    .when("/newExercise", {
         templateUrl: "app/exercises/newExercise.html",
         controller : "newExerciseCtrl"
     })

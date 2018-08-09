@@ -6,20 +6,53 @@
                 <h3>New Exercise</h3>
             </div>
             <div class="col-sm-3 col-md-3 col-lg-4 ml-auto">
-                <a ng-href="#!/exercises/newExercise" class="btn btn-secondary float-md-right" ng-click="">Add Exercise</a>
+                <a ng-href="#!/exercises" class="btn btn-secondary float-md-right">Back to Exercise Library</a>
             </div>  
         </div>
         <div>
             <hr>
-            <pre>Browse or add new Exercises</pre>
+            <pre>Add new Exercise</pre>
         </div>
     </div>
 </header>
-<main class="container container-fluid mb-5">
-    <div class="row mx-auto">
-        <div class="col-sm-3 col-md-3 col-lg-4">
-            
+<section class="container container-fluid mt-4">
+    <form class="">
+        <div class="form-group row">
+            <label for="name" class="col-sm-2 col-form-label">Name: </label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="name" ng-model="name">
+            </div>
         </div>
-    </div>
-</main>
+        <div class="form-group row">
+            <label for="description" class="col-sm-2 col-form-label">Description</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="description"  ng-model="description">
+            </div>
+        </div>
+        <div class="form-group row">
+                <label for="duration" class="col-sm-2 col-form-label">Comments: </label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="comment" ng-model="comment">
+                </div>
+        </div>
+        <div class="form-group row">
+            <label for="imageUrl" class="col-sm-2 col-form-label">Picture: </label>
+            <div class="col-sm-10">
+                <input type="file" accept="image/*" image="image" id="imageUrl"/>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="video" class="col-sm-2 col-form-label">Video: </label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="video" ng-model="videoUrl">
+            </div>
+        </div>
+        <div class="form-inline row">
+            <div class="col-sm-3 my-1">
+                <button type="button" class="btn btn-block btn-md btn-success" ng-click="createExercise()">Create</button>
+            </div>
+        </div>
+    </form>
+    <!-- <img class="img-fluid" ng-src="{{image.url}}" alt="{{name}}" > -->
+</section>
 <footer-navbar></footer-navbar>

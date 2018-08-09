@@ -1,16 +1,20 @@
 app.factory('exercises', function($http, $q){
+var appUrl = "https://my-json-server.typicode.com/ronprze/activity-monitor/"
+
     function Exercise(plainExe){
         this.id = plainExe.id;
         this.name = plainExe.name;
         this.description = plainExe.description;
+        this.comment = plainExe.comment;
         this.imageUrl = plainExe.imageUrl;
+        this.videoUrl = plainExe.videoUrl;
     }
 
     function getAllExercises(){
         var async = $q.defer();
 
-        var exerciseURL = "https://my-json-server.typicode.com/ronprze/activity-monitor/exercises";
-        $http.get(exerciseURL).then(function(response){
+        var exercisesURL = appUrl + "exercises";
+        $http.get(exercisesURL).then(function(response){
             var exercises = [];
             response.data.forEach(function(exercise) {
                 exercises.push(new Exercise(exercise));
@@ -23,16 +27,23 @@ app.factory('exercises', function($http, $q){
         return async.promise;
     }
 
-    function setExercise(){
+    function editExercise(exercise){
         
     }
 
-    function addExercise(){
 
-    }
+    function createExercise(exercise){
+        var async = $q.defer();
 
-    function createExercise(){
+        var exercisesURL = appUrl + "exercises";
+        $http.post(exercisesURL, exercise).then(function(response){
+            var exercise = new Exercise(response.data);
+            async.resolve(exercise);
+        }, function(err){
+           async.reject(err); 
+        })
 
+        return async.promise;
     }
 
     function getExerciseById(){
@@ -41,8 +52,7 @@ app.factory('exercises', function($http, $q){
 
     return {
         getAllExercises : getAllExercises,
-        setExercise : setExercise,
-        addExercise :addExercise,
+        editExercise : editExercise,
         createExercise: createExercise,
         getExerciseById: getExerciseById
     }
