@@ -6,7 +6,7 @@ app.factory('exercises', function($http, $q){
         this.imageUrl = plainExe.imageUrl;
     }
 
-    function getExercises(){
+    function getAllExercises(){
         var async = $q.defer();
 
         var exerciseURL = "https://my-json-server.typicode.com/ronprze/activity-monitor/exercises";
@@ -35,10 +35,15 @@ app.factory('exercises', function($http, $q){
 
     }
 
+    function getExerciseById(){
+
+    }
+
     return {
-        getExercises : getExercises,
+        getAllExercises : getAllExercises,
         setExercise : setExercise,
         addExercise :addExercise,
-        createExercise: createExercise
+        createExercise: createExercise,
+        getExerciseById: getExerciseById
     }
 });

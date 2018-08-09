@@ -7,7 +7,7 @@ app.controller('exercisesCtrl', function($scope, $location, exercises, usr, $log
     }
 
     //get all Exercises
-    exercises.getExercises().then(function(exercises){
+    exercises.getAllExercises().then(function(exercises){
         $scope.exercises = exercises;
     }, function(err){
         $log.logs(err);
@@ -34,6 +34,6 @@ app.controller('exercisesCtrl', function($scope, $location, exercises, usr, $log
             $location.path("/exercises");
         }, function(err){
             $log.log(err);
-        })
+        });
     }
 });
