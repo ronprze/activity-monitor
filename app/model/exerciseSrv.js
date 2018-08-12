@@ -5,13 +5,13 @@ var appUrl = "https://my-json-server.typicode.com/ronprze/activity-monitor/"
         this.id = plainExe.id;
         this.name = plainExe.name;
         this.description = plainExe.description;
-        this.comment = plainExe.comment;
-        if (plainExe.imageUrl === ""){
+        this.comment = plainExe.details.comment;
+        if (plainExe.details.imageUrl === ""){
             this.imageUrl = "images/am_exe_placeholder.png";
         } else {
-            this.imageUrl = plainExe.imageUrl;
+            this.imageUrl = plainExe.details.imageUrl;
         } 
-        this.videoUrl = plainExe.videoUrl;
+        this.videoUrl = plainExe.details.videoUrl;
     }
 
     function getAllExercises(){
