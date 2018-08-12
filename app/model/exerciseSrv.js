@@ -6,7 +6,11 @@ var appUrl = "https://my-json-server.typicode.com/ronprze/activity-monitor/"
         this.name = plainExe.name;
         this.description = plainExe.description;
         this.comment = plainExe.comment;
-        this.imageUrl = plainExe.imageUrl;
+        if (plainExe.imageUrl === ""){
+            this.imageUrl = "images/am_exe_placeholder.png";
+        } else {
+            this.imageUrl = plainExe.imageUrl;
+        } 
         this.videoUrl = plainExe.videoUrl;
     }
 

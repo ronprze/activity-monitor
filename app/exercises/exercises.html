@@ -14,7 +14,7 @@
         </div>
         <div>
             <hr>
-            <pre>Browse or add new Exercises</pre>
+            <pre>Browse or add a new Exercise</pre>
         </div>
     </div>
 </header>
@@ -22,7 +22,7 @@
     <div class="row my-1">
         <div class="col-sm-3 col-md-3 col-lg-4" ng-repeat="exe in exercises">
             <div class="card-deck mx-auto">
-                <img class="card-img-top" ng-src="https://www.w3schools.com/bootstrap4/img_avatar1.png" alt="{{exe.name}}">
+                <img class="card-img-top" ng-src="{{exe.imageUrl}}" alt="{{exe.name}}">
                 <div class="card-body">
                     <h4 class="card-title">{{exe.name}}</h4>
                     <p class="card-text">{{exe.description}}</p>

@@ -18,128 +18,138 @@
     "exercises" : [
         {
             "id": 1,
-            "name": "Squat",
+            "name": "Back Squat",
             "description": "The Squat is a full body compound exercise. You Squat by bending your hips and knees while the bar rests on your upper-back. Squat down until your hips are below your knees. Keep your knees out and lower back neutral. Then Squat back up. Lock your hips and knees at the top.",
-            "type" : "compound",
-            "joint": "Hip",
-            "muscles" : [
-                "Gluteus Maximus",
-                "Quadriceps",
-                "Adductor Magnus",
-                "Soleus",
-                "Hamstrings",
-                "Gastrocnemius",
-                "Erector Spinae",
-                "Rectus Abdominis",
-                "Obliques"
-            ],
-            "variations": [
-                "Front Squat",
-                "Hack Squat",
-                "Full Squat",
-                "Overhead Squat"
-            ],
-            "comments": "Let the hips lead the way down and keep your back straight.",
-            "videoUrl": "https://www.youtube.com/watch?v=upF-znxk1U4",
-            "imageUrl": ""
+            "details": {
+                "type" : "compound",
+                "joint": "Hip",
+                "muscles" : [
+                    "Gluteus Maximus",
+                    "Quadriceps",
+                    "Adductor Magnus",
+                    "Soleus",
+                    "Hamstrings",
+                    "Gastrocnemius",
+                    "Erector Spinae",
+                    "Rectus Abdominis",
+                    "Obliques"
+                ],
+                "variations": [
+                    "Front Squat",
+                    "Hack Squat",
+                    "Full Squat",
+                    "Overhead Squat"
+                ],
+                "comments": "Let the hips lead the way down and keep your back straight.",
+                "videoUrl": "https://www.youtube.com/watch?v=upF-znxk1U4",
+                "imageUrl": ""
+            }
         },
         {
             "id": 2,
             "name": "Deadlift",
             "description": "Proper Deadlift form starts with the weight on the floor. Pull the bar to your mid-thighs and lock your hips and knees. Return the weight to the floor by moving your hips back while bending your legs. Rest a second at the bottom and repeat.",
-            "type" : "compound",
-            "joint": "Hip",
-            "muscles" : [
-                "Gluteus Maximus",
-                "Quadriceps",
-                "Adductor Magnus",
-                "Soleus",
-                "Hamstrings",
-                "Gastrocnemius",
-                "Erector Spinae",
-                "Trapezius, Middle",
-                "Trapezius, Upper",
-                "Levator Scapulae",
-                "Rhomboids",
-                "Rectus Abdominis",
-                "Obliques"
-            ],
-            "variations": [
-                "Stiff-leg Deadlift",
-                "Sumo Deadlift",
-                "Deficit Deadlift"
-            ],
-            "comments": "Keep the chest out and extended, keep the back straight",
-            "videoUrl": "",
-            "imageUrl": ""
+            "details": {
+                "type" : "compound",
+                "joint": "Hip",
+                "muscles" : [
+                    "Gluteus Maximus",
+                    "Quadriceps",
+                    "Adductor Magnus",
+                    "Soleus",
+                    "Hamstrings",
+                    "Gastrocnemius",
+                    "Erector Spinae",
+                    "Trapezius, Middle",
+                    "Trapezius, Upper",
+                    "Levator Scapulae",
+                    "Rhomboids",
+                    "Rectus Abdominis",
+                    "Obliques"
+                ],
+                "variations": [
+                    "Stiff-leg Deadlift",
+                    "Sumo Deadlift",
+                    "Deficit Deadlift"
+                ],
+                "comments": "Keep the chest out and extended, keep the back straight",
+                "videoUrl": "",
+                "imageUrl": ""
+            }
         },
         {
             "id": 3,
             "name": "Pullup",
             "description": "Proper Pullup form starts hanging on a pullup bar. Grip the bar shoulder-width apart with straight arms. Pull yourself up by pulling your elbows to the floor. Keep pulling until your chin passes the bar. Lower yourself all the way down until your arms are straight. Then pull yourself up again.",
-            "type" : "compound",
-            "joint": "Shoulder",
-            "muscles" : [
-                "Latissimus Dorsi",
-                "Posterior Deltoid",
-                "Triceps long head",
-                "Teres major",
-                "Pectoralis major sternal & lower heads"
-            ],
-            "variations": [
-                "Chin-ups",
-                "Wide grip",
-                "Narrow grip",
-                "Behind the neck"
-            ],
-            "comments": "",
-            "videoUrl": "",
-            "imageUrl": ""
+            "details": {
+                "type" : "compound",
+                "joint": "Shoulder",
+                "muscles" : [
+                    "Latissimus Dorsi",
+                    "Posterior Deltoid",
+                    "Triceps long head",
+                    "Teres major",
+                    "Pectoralis major sternal & lower heads"
+                ],
+                "variations": [
+                    "Chin-ups",
+                    "Wide grip",
+                    "Narrow grip",
+                    "Behind the neck"
+                ],
+                "comments": "",
+                "videoUrl": "",
+                "imageUrl": ""
+            }
         },
         {
             "id": 4,
             "name": "Overhead Press",
             "description": "Proper Overhead Press form starts standing with the bar on your shoulders. Press the bar over your head until your elbows are locked. Don’t use your legs, keep them straight. Lower the bar to your shoulders and repeat.",
-            "type" : "compound",
-            "joint": "Shoulder",
-            "muscles" : [
-                "Middle Deltoid",
-                "Anterior Deltoid",
-                "Pectoralis major clavicular head",
-                "Supraspinatus (Frist 5-30 degrees)"
-            ],
-            "variations": [
-                "Push press",
-                "Military press",
-                "Clean and press", 
-                "Seated press",
-                "Behind the neck press",
-                "Dumbbell overhead press"
-            ],
-            "comments": "",
-            "videoUrl": "",
-            "imageUrl": ""
+            "details": {
+                "type" : "compound",
+                "joint": "Shoulder",
+                "muscles" : [
+                    "Middle Deltoid",
+                    "Anterior Deltoid",
+                    "Pectoralis major clavicular head",
+                    "Supraspinatus (Frist 5-30 degrees)"
+                ],
+                "variations": [
+                    "Push press",
+                    "Military press",
+                    "Clean and press", 
+                    "Seated press",
+                    "Behind the neck press",
+                    "Dumbbell overhead press"
+                ],
+                "comments": "",
+                "videoUrl": "",
+                "imageUrl": ""
+            }
         },
         {
             "id": 5,
             "name": "Chest Dip",
             "description": "Dips are a compound, body-weight exercise. You do Dips by first raising yourself on two dip bars with straight arms. Lower your body until your shoulders are below your elbows. Push yourself up until your arms are straight again. Dips work your chest, shoulders, back and arm muscles.",
-            "type" : "compound",
-            "joint": "Shoulder",
-            "muscles" : [
-                "Pectoralis major",
-                "Lower Pectoralis major",
-                "Anterior Deltoid",
-                "Coracobrachialis",
-                "Biceps short head"
-            ],
-            "variations": [
-                "Weighted dips",
-                "Rings dips"
-            ],
-            "comments": "",
-            "videoUrl": "",
-            "imageUrl": ""
+            "details": {
+                "type" : "compound",
+                "joint": "Shoulder",
+                "muscles" : [
+                    "Pectoralis major",
+                    "Lower Pectoralis major",
+                    "Anterior Deltoid",
+                    "Coracobrachialis",
+                    "Biceps short head"
+                ],
+                "variations": [
+                    "Weighted dips",
+                    "Rings dips"
+                ],
+                "comments": "",
+                "videoUrl": "",
+                "imageUrl": ""
+            }
         }
     ]
 }
