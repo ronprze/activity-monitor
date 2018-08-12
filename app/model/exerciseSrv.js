@@ -1,5 +1,7 @@
-app.factory('exercises', function($http, $q){
+app.factory('exercises', function($http, $q, $log){
     var exercisesURL = "https://my-json-server.typicode.com/ronprze/activity-monitor/exercises/";
+    var exercises = [];
+    var wasLoaded = false;
 
     function Exercise(plainExe){
         this.id = plainExe.id;
@@ -15,18 +17,26 @@ app.factory('exercises', function($http, $q){
     }
 
     function getAllExercises(){
-        var async = $q.defer();
+         var async = $q.defer();
 
-        $http.get(exercisesURL).then(function(response){
-            var exercises = [];
-            response.data.forEach(function(exercise) {
-                exercises.push(new Exercise(exercise));
+        if (wasLoaded){
+            async.resolve(exercises)
+        } else {
+            exercises.splice(0, exercises.length);
+
+            $http.get(exercisesURL).then(function(response){
+                response.data.forEach(function(exercise) {
+                    exercises.push(new Exercise(exercise));
+                })
+                wasLoaded = true;
+                async.resolve(exercises);
+
+            }, function(err){
+                $log.error(err);
+                async.reject(err);
             })
-            async.resolve(exercises);
-        }, function(err){
-            async.reject(err);
-        })
-
+        }
+        
         return async.promise;
     }
 
@@ -53,9 +63,10 @@ app.factory('exercises', function($http, $q){
         var exerciseURL = exercisesURL + "?id=" + exeId;
 
         $http.get(exerciseURL).then(function(response){
-            var exercise = new Exercise(response.data);
-            async.resolve(exercise);
+            var exe = response.data;
+            async.resolve(exe);
         }, function(err){
+            $log.error(err);
             async.reject(err);
         })
 

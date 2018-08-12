@@ -6,19 +6,16 @@ app.controller('exerciseDetailsCtrl',function($scope, $location, exercises, usr,
         return;
     }
 
-    //$scope.exercise = {};
+    //get Exercise details by exercise ID
+    exercises.getAllExercises().then(function() {
+        $scope.exercise = exercises.getExerciseById($routeParams.id);
+    });
 
     //get Exercise details by exercise ID
-    exercises.getExerciseById($routeParams.id).then(function(response){
+    /* exercises.getExerciseById($routeParams.id).then(function(response){
         $scope.exercise = response;
     }, function(err){
         console.log(err);
-    });
-
-    /* exercises.getAllExercises().then(function() {
-        $scope.exercise =  exercises.getExerciseById($routeParams.id);
-    }, function(err){
-        $log.log(err);
     }); */
     
 });

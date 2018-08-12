@@ -12,10 +12,11 @@ app.controller('exercisesCtrl', function($scope, $location, exercises, usr, $log
     }, function(err){
         $log.logs(err);
     });
-
+    
+    /* 
     $scope.openExerciseDetails = function(exercise){
         var id = $scope.exercise.id;
-        $location.path("/exercises" + id);
-    }
+        $location.path("/exercises/" + id);
+    } */
 
 });
