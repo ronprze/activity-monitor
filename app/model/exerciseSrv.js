@@ -46,14 +46,24 @@ var appUrl = "https://my-json-server.typicode.com/ronprze/activity-monitor/"
         return async.promise;
     }
 
-    function getExerciseById(){
+    function getExerciseById(exeId){
+        var async = $q.defer();
+        var exerciseURL = appUrl + "exercises/?id=" + exeId;
 
+        $http.get(exerciseURL).then(function(response){
+            var exercise = new Exercise(response.data);
+            async.resolve(exercise);
+        }, function(err){
+            async.reject(err);
+        })
+
+        return async.promise;
     }
 
     return {
         getAllExercises : getAllExercises,
         editExercise : editExercise,
-        createExercise: createExercise,
-        getExerciseById: getExerciseById
+        createExercise : createExercise,
+        getExerciseById : getExerciseById
     }
 });

@@ -1,7 +1,22 @@
 <wo-navbar></wo-navbar>
-<header>
-    <h3></h3>
-    <hr>
+<header class="mt-3">
+    <div class="container container-fluid">
+        <div class="row">
+            <div class="col-sm-3 col-md-3 col-lg-4">               
+                <h3 class="">{{exercise.name}}</h3>
+            </div>
+            <!-- <div class="col-sm-3 col-md-3 col-lg-4">
+
+            </div> -->
+            <div class="col-sm-3 col-md-3 col-lg-4 ml-auto">
+                <a ng-href="#!/newExercise" class="btn btn-secondary float-md-right">Add Exercise</a>
+            </div>  
+        </div>
+        <div>
+            <hr>
+            <pre>View exercise details or addd a new exercise</pre>
+        </div>
+    </div>
 </header>
 <main>
     

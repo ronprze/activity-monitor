@@ -6,9 +6,18 @@ app.controller('newExerciseCtrl',function($scope, $location, exercises, usr, $lo
         return;
     }
 
+    $scope.Exercise = function(){
+        var name = "";
+        var description = "";
+        var comments = "";
+        var videoUrl = "";
+        var imageUrl = "";
+    }
+
     $scope.createExercise = function(){
+
         exercises.createExercise({
-            //id:$scope.id,
+            id:$scope.id,
             name: $scope.name, 
             description: $scope.description, 
             comments: $scope.comments,

@@ -6,8 +6,6 @@ app.controller('exercisesCtrl', function($scope, $location, exercises, usr, $log
         return;
     }
 
-    //$scope.isNewExe = false;
-
     //get all Exercises
     exercises.getAllExercises().then(function(exercises){
         $scope.exercises = exercises;
@@ -15,27 +13,9 @@ app.controller('exercisesCtrl', function($scope, $location, exercises, usr, $log
         $log.logs(err);
     });
 
-    //get Exercise details
-
-
-    $scope.createExercise = function(){
-        /* name = "";
-        description = "";
-        comments = "";
-        videoUrl = "";
-        imageUrl = ""; */
-
-        exercises.createExercise({
-            name: $scope.name, 
-            description: $scope.description, 
-            comments: $scope.comments,
-            videoUrl: $scope.videoUrl,
-            imageUrl: $scope.imageUrl
-
-        }).then(function(){
-            $location.path("/exercises");
-        }, function(err){
-            $log.log(err);
-        });
+    $scope.openExerciseDetails = function(exercise){
+        var id = $scope.exercise.id;
+        $location.path("/exercises" + id);
     }
+
 });

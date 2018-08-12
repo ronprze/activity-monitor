@@ -33,7 +33,7 @@ app.config(function($routeProvider){
     })
     .when("/exercises/:id", {
         templateUrl: "app/exercises/exerciseDetails.html",
-        controller : "exercisesCtrl"
+        controller : "exerciseDetailsCtrl"
     })
     .when("/newExercise", {
         templateUrl: "app/exercises/newExercise.html",
