@@ -1,5 +1,5 @@
 app.factory('exercises', function($http, $q){
-var appUrl = "https://my-json-server.typicode.com/ronprze/activity-monitor/"
+    var exercisesURL = "https://my-json-server.typicode.com/ronprze/activity-monitor/exercises/";
 
     function Exercise(plainExe){
         this.id = plainExe.id;
@@ -17,7 +17,6 @@ var appUrl = "https://my-json-server.typicode.com/ronprze/activity-monitor/"
     function getAllExercises(){
         var async = $q.defer();
 
-        var exercisesURL = appUrl + "exercises";
         $http.get(exercisesURL).then(function(response){
             var exercises = [];
             response.data.forEach(function(exercise) {
@@ -39,7 +38,6 @@ var appUrl = "https://my-json-server.typicode.com/ronprze/activity-monitor/"
     function createExercise(exercise){
         var async = $q.defer();
 
-        var exercisesURL = appUrl + "exercises";
         $http.post(exercisesURL, exercise).then(function(response){
             var exercise = new Exercise(response.data);
             async.resolve(exercise);
@@ -52,7 +50,7 @@ var appUrl = "https://my-json-server.typicode.com/ronprze/activity-monitor/"
 
     function getExerciseById(exeId){
         var async = $q.defer();
-        var exerciseURL = appUrl + "exercises/?id=" + exeId;
+        var exerciseURL = exercisesURL + "?id=" + exeId;
 
         $http.get(exerciseURL).then(function(response){
             var exercise = new Exercise(response.data);
