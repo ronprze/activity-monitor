@@ -1,4 +1,4 @@
-app.controller('exerciseDetailsCtrl',function($scope, $location, exercises, usr, $routeParams){
+app.controller('exerciseDetailsCtrl',function($scope, $location, exercises, usr, $routeParams, $sce){
     // Checking if the user is logged in, 
     //if not navigating back to home page
     if (!usr.isLoggedIn()) {
@@ -9,6 +9,7 @@ app.controller('exerciseDetailsCtrl',function($scope, $location, exercises, usr,
     //get Exercise details by exercise ID   
     exercises.getExerciseById($routeParams.id).then(function(response){
         $scope.exercise = response[0];
-        //$scope.youtubeUrl = "https://www.youtube.com/embed/";
+        $scope.videoUrl = $sce.trustAsResourceUrl($scope.exercise.details.videoUrl);
     });
+    
 });
