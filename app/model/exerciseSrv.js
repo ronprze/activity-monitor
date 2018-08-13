@@ -58,6 +58,8 @@ app.factory('exercises', function($http, $q, $log){
         return async.promise;
     }
 
+
+    //change to returning exercise from the local array
     function getExerciseById(exeId){
         var async = $q.defer();
         var exerciseURL = exercisesURL + "?id=" + exeId;

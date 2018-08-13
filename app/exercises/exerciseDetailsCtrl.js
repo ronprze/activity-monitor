@@ -5,17 +5,10 @@ app.controller('exerciseDetailsCtrl',function($scope, $location, exercises, usr,
         $location.path("/");
         return;
     }
-
-    //get Exercise details by exercise ID
-    exercises.getAllExercises().then(function() {
-        $scope.exercise = exercises.getExerciseById($routeParams.id);
+    
+    //get Exercise details by exercise ID   
+    exercises.getExerciseById($routeParams.id).then(function(response){
+        $scope.exercise = response[0];
     });
-
-    //get Exercise details by exercise ID
-    /* exercises.getExerciseById($routeParams.id).then(function(response){
-        $scope.exercise = response;
-    }, function(err){
-        console.log(err);
-    }); */
     
 });
