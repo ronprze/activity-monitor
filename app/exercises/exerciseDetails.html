@@ -20,12 +20,42 @@
 </header>
 <main>
     <div class="container container-fluid">
-        <div class="video-container">
+        <div class="video-container mb-3" ng-show="isVideoUrl()">
             <iframe ng-src={{videoUrl}} class="video" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
+        
         <div class="row">
-            <div class="col-sm-9 col-md-9 col-lg-9">
-                
+            <div class="col-sm-4 col-md-4 col-lg-4">
+                <p>Comments: </p>
+            </div>
+            <div class="col-sm-4 col-md-4 col-lg-4">
+                <p>{{exercise.details.comments}}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 col-md-4 col-lg-4">
+                <p>Exercise Type: </p>
+            </div>
+            <div class="col-sm-4 col-md-4 col-lg-4">
+                <p>{{exercise.details.type}}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 col-md-4 col-lg-4">
+                <p>Target Joint: </p>
+            </div>
+            <div class="col-sm-4 col-md-4 col-lg-4">
+                <p>{{exercise.details.joint}}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 col-md-4 col-lg-4">
+                <p>Exercise variations: </p>
+            </div>
+            <div class="col-sm-4 col-md-4 col-lg-4">
+                <div class="list-group list-group-flush" ng-repeat="e in exercise.details.variations">
+                    <a href="#" class="list-group-item list-group-item-action">{{e}}</a>
+                </div>
             </div>
         </div>
     </div>

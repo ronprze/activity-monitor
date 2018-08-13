@@ -10,6 +10,9 @@ app.controller('exerciseDetailsCtrl',function($scope, $location, exercises, usr,
     exercises.getExerciseById($routeParams.id).then(function(response){
         $scope.exercise = response[0];
         $scope.videoUrl = $sce.trustAsResourceUrl($scope.exercise.details.videoUrl);
+        $scope.isVideoUrl = function(){
+            return ($scope.exercise.details.videoUrl !== "") ? true:false;
+        }
     });
-    
+
 });
