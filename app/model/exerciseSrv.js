@@ -16,6 +16,7 @@ app.factory('exercises', function($http, $q, $log){
         this.videoUrl = plainExe.details.videoUrl;
     }
 
+    //get all exercises - need to add paging  
     function getAllExercises(){
          var async = $q.defer();
 
@@ -59,7 +60,7 @@ app.factory('exercises', function($http, $q, $log){
     }
 
 
-    //change to returning exercise from the local array
+    //Get exercise by ID using 
     function getExerciseById(exeId){
         var async = $q.defer();
         var exerciseURL = exercisesURL + "?id=" + exeId;
@@ -75,10 +76,23 @@ app.factory('exercises', function($http, $q, $log){
         return async.promise;
     }
 
+    //get exercise by ID 2. loading from the local array
+    function getExeById(exercises, exeId){
+        if (exercises.length > 0){
+            for (var i = 0; i < exercises.length; i++){
+                if (exercises[i].id === exeId)
+                    return exercises[i];
+            }
+        } else {
+            return "not found";
+        }
+    }
+
     return {
         getAllExercises : getAllExercises,
         editExercise : editExercise,
         createExercise : createExercise,
-        getExerciseById : getExerciseById
+        getExerciseById : getExerciseById,
+        getExeById : getExeById
     }
 });
