@@ -151,5 +151,18 @@
                 "imageUrl": ""
             }
         }
+    ],
+    "workouts" : [
+        {
+            "id": 1,
+            "name" : "5x5",
+            "goal" : "Get stronger...",
+            "exercises" : [
+                {
+                    
+                }
+            ],
+            "comment" : "A simple 5x5 workout plan for the intermidiate athlete."
+        }
     ]
 }
