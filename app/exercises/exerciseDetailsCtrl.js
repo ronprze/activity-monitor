@@ -5,10 +5,10 @@ app.controller('exerciseDetailsCtrl',function($scope, $location, exercises, usr,
         $location.path("/");
         return;
     }
-    
+
     //get Exercise details by exercise ID   
     exercises.getExerciseById($routeParams.id).then(function(response){
         $scope.exercise = response[0];
+        //$scope.youtubeUrl = "https://www.youtube.com/embed/";
     });
-    
 });
