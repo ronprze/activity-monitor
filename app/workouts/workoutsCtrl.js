@@ -1,8 +1,13 @@
-app.controller('workoutsCtrl', function($scope, usr, $location){
+app.controller('workoutsCtrl', function($scope, usr, $location, workouts, $log){
     //if user logged in
-    $scope.isUserLoggedIn = function() {
-        return usr.isLoggedIn();
+    if (!usr.isLoggedIn()) {
+        $location.path("/");
+        return;
     }
 
-    
+    workouts.getAllWorkouts().then(function(response){
+        $scope.workouts = response;
+    }, function(err){
+        $log.error(err);
+    });
 });

@@ -10,7 +10,7 @@ app.controller('exercisesCtrl', function($scope, $location, exercises, usr, $log
     exercises.getAllExercises().then(function(exercises){
         $scope.exercises = exercises;
     }, function(err){
-        $log.logs(err);
+        $log.error(err);
     });
     
     /* 
