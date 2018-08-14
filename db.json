@@ -159,10 +159,17 @@
             "goal" : "Get stronger...",
             "exercises" : [
                 {
-                    
+                    "exerciseId" : 1,
+                    "name" : "Back Squat",
+                    "sets" : 5,
+                    "reps" : 5
                 }
             ],
-            "comment" : "A simple 5x5 workout plan for the intermidiate athlete."
+            "comment" : "A simple 5x5 workout plan for the intermidiate athlete.",
+            "date" : "",
+            "start_time" : "",
+            "end_time" : "",
+            "userId" : 1
         }
     ]
 }

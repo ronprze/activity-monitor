@@ -15,12 +15,17 @@ app.factory('workouts', function($http, $q, exercises){
     function getAllWorkouts(){
         var async = $q.defer();
 
-
+        
 
         return async.promise;
     }
 
+    function getWorkoutById(woId){
+
+    }
+
     return {
-        getAllWorkouts : getAllWorkouts
+        getAllWorkouts : getAllWorkouts,
+        getWorkoutById : getWorkoutById
     }
 });
