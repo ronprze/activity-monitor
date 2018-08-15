@@ -1,5 +1,6 @@
-app.factory('workouts', function($http, $q, exercises, $log){
-    var workoutsUrl = "https://my-json-server.typicode.com/ronprze/activity-monitor/workouts/";
+app.factory('workouts', function($http, $q, $log, users){
+    var workoutsUrl = "https://my-json-server.typicode.com/ronprze/activity-monitor/workouts" //+
+                                //"?userId=" + users.getActiveUser().id;
     var workouts = [];
     var wo = {};
     var wasLoaded = false;
@@ -15,11 +16,12 @@ app.factory('workouts', function($http, $q, exercises, $log){
         
     }
 
-    function getAllWorkouts(){
+    function getActiveUserWorkouts(){
         var async = $q.defer();
+        //var activeUserWOUrl = workoutsUrl; // + "?userId=" + users.getActiveUser().id
 
         $http.get(workoutsUrl).then(function(response){
-            response.dete.forEach(function(workout){
+            response.data.forEach(function(workout){
                 workouts.push(new Workout(workout));
             })
             async.resolve(workouts);
@@ -30,9 +32,9 @@ app.factory('workouts', function($http, $q, exercises, $log){
         return async.promise;
     }
 
-    function getWorkoutById(workouts, woId){
+    function getActiveUseWorkoutById(workouts, woId){
         for (var i = 0; i < workouts.length; i++){
-            if (workouts[i].id === woId){
+            if (workouts[i].id === woId && workouts[i].userId === users.getActiveUser().id){
                 wo = workouts[i];
             }
         }
@@ -41,7 +43,7 @@ app.factory('workouts', function($http, $q, exercises, $log){
     }
 
     return {
-        getAllWorkouts : getAllWorkouts,
-        getWorkoutById : getWorkoutById
+        getActiveUserWorkouts : getActiveUserWorkouts,
+        getActiveUseWorkoutById : getActiveUseWorkoutById
     }
 });

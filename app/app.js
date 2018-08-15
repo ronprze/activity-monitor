@@ -12,17 +12,13 @@ app.config(function($routeProvider){
     .when("/signup", {
         
     })
-    .when("/dashboard", {
-        templateUrl: "app/dashboard/dashboard.html",
-        controller : "dashboardCtrl"
-    })
     .when("/profile", {
         templateUrl: "app/profile/profile.html",
         controller : "profileCtrl"
     })
     .when("/workouts", {
         templateUrl: "app/workouts/workouts.html",
-        controller : "workoutsCtrl"
+        controller : "woCtrl"
     })
     .when("newWorkout", {
         templateUrl: "app/workouts/newWorkout.html"
